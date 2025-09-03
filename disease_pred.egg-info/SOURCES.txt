@@ -1,0 +1,7 @@
+README.md
+setup.py
+disease_pred.egg-info/PKG-INFO
+disease_pred.egg-info/SOURCES.txt
+disease_pred.egg-info/dependency_links.txt
+disease_pred.egg-info/requires.txt
+disease_pred.egg-info/top_level.txt

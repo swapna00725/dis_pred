@@ -1,0 +1,87 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Disease predictor</h1>
+   
+        <form action="/predict" method="post">
+        <h1>
+            <legend>Disease Prediction</legend>
+        </h1>
+         <div class="mb-3">
+            <label>fever:</label>
+        <select name="fever">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+        <div class="mb-3">
+            <label>headache:</label>
+        <select name="headache">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+        <div class="mb-3">
+            <label>nausea:</label>
+        <select name="nausea">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+        <div class="mb-3">
+            <label>vomiting:</label>
+        <select name="vomiting">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+        <div class="mb-3">
+            <label>fatigue:</label>
+        <select name="fatigue">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+        <div class="mb-3">
+            <label>joint_pain:</label>
+        <select name="joint_pain">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+        <div class="mb-3">
+            <label>skin_rash:</label>
+        <select name="skin_rash">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+        <div class="mb-3">
+            <label>cough:</label>
+        <select name="cough">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+        <div class="mb-3">
+            <label>weight_loss:</label>
+        <select name="weight_loss">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+         <div class="mb-3">
+            <label>yellow_eyes:</label>
+        <select name="yellow_eyes">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select><br><br>
+
+
+        <input type="submit" value="predict">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+   <body>
+</html>
