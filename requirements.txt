@@ -4,5 +4,5 @@ flask
 scikit-learn
 catboost
 lightgbm
-Xgboost
+
 -e .
