@@ -1,1 +1,1 @@
-Disease Prediction Prediction Project
+Diseases prediction project
