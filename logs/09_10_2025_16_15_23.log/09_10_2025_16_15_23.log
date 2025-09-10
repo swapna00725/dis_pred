@@ -1,0 +1,11 @@
+[ 2025-09-10 16:15:23,884 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-09-10 16:15:23,889 ] 97 werkzeug - INFO -  * Debugger PIN: 251-144-859
+[ 2025-09-10 16:15:42,225 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 16:15:42] "GET / HTTP/1.1" 200 -
+[ 2025-09-10 16:15:52,500 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 16:15:52] "GET / HTTP/1.1" 200 -
+[ 2025-09-10 16:15:56,575 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 16:15:56] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 16:16:03,177 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 16:16:03] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-09-10 16:16:03,428 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 16:16:03] "GET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[ 2025-09-10 16:16:03,428 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 16:16:03] "GET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[ 2025-09-10 16:16:03,462 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 16:16:03] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png&s=4l680Au9YwTpb5th2Ygp HTTP/1.1" 200 -
+[ 2025-09-10 16:16:03,477 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 16:16:03] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[ 2025-09-10 16:17:42,166 ] 97 werkzeug - INFO -  * Detected change in 'D:\\projects_practice\\dis_pred\\src\\utils.py', reloading

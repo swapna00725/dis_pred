@@ -1,0 +1,10 @@
+[ 2025-09-10 16:12:46,849 ] 13 root - INFO - training pipelining started
+[ 2025-09-10 16:12:46,849 ] 26 root - INFO - Data ingestion started
+[ 2025-09-10 16:12:46,872 ] 49 root - INFO - Train, test, and raw data saved successfully
+[ 2025-09-10 16:12:46,876 ] 47 root - INFO - Read train and test data completed
+[ 2025-09-10 16:12:46,876 ] 49 root - INFO - Obtaining preprocessing object
+[ 2025-09-10 16:12:46,878 ] 63 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2025-09-10 16:12:46,878 ] 27 root - INFO - find the cat_cols and num_cols
+[ 2025-09-10 16:12:46,878 ] 34 root - INFO - disease columns: ['fever', 'headache', 'nausea', 'vomiting', 'fatigue', 'joint_pain', 'skin_rash', 'cough', 'weight_loss', 'yellow_eyes']
+[ 2025-09-10 16:12:46,878 ] 30 root - INFO - model training has started
+[ 2025-09-10 16:12:50,407 ] 27 root - ERROR - error has occurred

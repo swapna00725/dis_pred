@@ -25,15 +25,15 @@ class DataTransformation:
     def get_data_transformer_object(self):
         try:
             logging.info("find the cat_cols and num_cols")
-            dis_columns = ['fever', 'headache', 'nausea', 'vomiting', 'fatigue', 'joint_pain','skin_rash', 'cough', 'weight_loss', 'yellow_eyes']
+            symptoms = ['fever', 'headache', 'nausea', 'vomiting', 'fatigue', 'joint_pain','skin_rash', 'cough', 'weight_loss', 'yellow_eyes']
                      
             pipeline=Pipeline(
                 steps=[
                 ("imputer",SimpleImputer(strategy="most_frequent"))])
 
-            logging.info(f"disease columns: {dis_columns}")
+            logging.info(f"disease columns: {symptoms}")
             
-            preprocessor=ColumnTransformer([("pipelines",pipeline,dis_columns) ])
+            preprocessor=ColumnTransformer([("pipelines",pipeline,symptoms) ])
                 
             return preprocessor
         except Exception as e:
@@ -54,11 +54,11 @@ class DataTransformation:
             y_test_df=test_df[target_col]    
 
             symptoms = X_train_df.columns.values
-            symptom_index = {symptom: idx for idx, symptom in enumerate(symptoms)} 
+           
 
-            le = LabelEncoder()
-            target_feature_train_df = le.fit_transform(y_train_df)
-            target_feature_test_df = le.transform(y_test_df)
+            #le = LabelEncoder()
+            #y_train_df = le.fit_transform(y_train_df)
+            #y_test_df = le.transform(y_test_df)
 
             logging.info("Applying preprocessing object on training dataframe and testing dataframe.")
 
@@ -67,8 +67,10 @@ class DataTransformation:
             input_train_arr=preprocessor_obj.fit_transform(X_train_df)
             input_test_arr=preprocessor_obj.transform(X_test_df)
 
-            train_arr=np.c_(input_train_arr,np.array(y_train_df))
-            test_arr=np.c_(input_test_arr,np.array(y_test_df))
+            symptom_index = {symptom: idx for idx, symptom in enumerate(symptoms)} 
+
+            train_arr=np.c_[input_train_arr,np.array(y_train_df)]
+            test_arr=np.c_[input_test_arr,np.array(y_test_df)]
 
             save_object(file_path=self.transform_config.preprocessor_data_path,obj=preprocessor_obj)
 

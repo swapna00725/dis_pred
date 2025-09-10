@@ -12,7 +12,7 @@ def get_requirements(file_path:str)->list[str]:
             req.remove(a)
         return req
 setup(
-    name='diseases_pred',
+    name='dis_pred',
     version='0.0.1',
     author='swapna',
     author_email='mswapnaj@gmail.com',

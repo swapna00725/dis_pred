@@ -14,7 +14,7 @@ from sklearn.metrics import accuracy_score
 
 from statistics import multimode
 
-from src.utils import save_object,evaluate_models
+from src.utils import save_object
 
 import pandas as pd
 import numpy as np
@@ -28,38 +28,13 @@ class ModelTrainer:
     def initiate_model_trainer(self,train_arr,test_arr,symptom_index):
         try:
             logging.info("model training has started")
-                        # Split data
+                        
             Xtr, ytr = train_arr[:, :-1], train_arr[:, -1]
             Xte, yte = test_arr[:, :-1], test_arr[:, -1]
 
-            models={"Decision Tree":DecisionTreeClassifier(),
-                    "Random Forest": RandomForestClassifier(),
-                    "Kneighbors":KNeighborsClassifier()}
-            
-            params= { "Decision Tree": {
-                     'criterion':['gini','entropy'],
-                     'max_depth': [None, 5, 10, 15],
-                     'min_samples_split': [2, 5, 10]},
-                
-                    "Random Forest":{
-                    'criterion': ['gini', 'entropy'],
-                    'n_estimators': [10, 50, 100],
-                    'max_depth': [None, 5, 10],                        
-                    },
-                
-                    "Kneighbors" :{
-                    'n_neighbors': [3, 5, 7, 9, 11],
-                    'weights': ['uniform', 'distance'],
-                    'metric': ['minkowski', 'manhattan']
-                    }
-                
-                   }
-            model_report : dict = evaluate_models(Xtr,ytr,Xte,yte,models,params)
-            print(model_report)
-
-            dt_model = DecisionTreeClassifier(**model_report["Decision Tree"]["best_params"]).fit(Xtr, ytr)
-            rf_model = RandomForestClassifier(**model_report["Random Forest"]["best_params"]).fit(Xtr, ytr)
-            knn_model = KNeighborsClassifier(**model_report["KNeighbors"]["best_params"]).fit(Xtr, ytr)
+            dt_model = DecisionTreeClassifier().fit(Xtr, ytr)
+            rf_model = RandomForestClassifier().fit(Xtr, ytr)
+            knn_model = KNeighborsClassifier().fit(Xtr, ytr)
 
             dt_preds = dt_model.predict(Xte)
             rf_preds = rf_model.predict(Xte)
@@ -73,12 +48,11 @@ class ModelTrainer:
             pkl_data = {
                  "dt_model": dt_model,
                  "rf_model": rf_model,
-                 "knn_mode": knn_model,
-                 
+                 "knn_model": knn_model,
                  "symptom_index": symptom_index
                  }
                     
-            save_object(self.model_config.model_file_path,pkl_data)
+            save_object(file_path=self.model_config.model_file_path,obj=pkl_data)
 
             acc_score=accuracy_score(yte, final_preds)
 

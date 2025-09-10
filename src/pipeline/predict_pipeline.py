@@ -18,20 +18,11 @@ class PredictPipeline:
             self.preprocessor = load_object(file_path=preprocessor_path)
 
             # Store models and symptom index
-            self.rf_model = loaded_data["rf_model"]
-            self.knn_model = loaded_data["knn_model"]
-            self.dt_model = loaded_data["dt_model"]
-            self.symptom_index = loaded_data["symptom_index"]
-
-        except Exception as e:
-            raise CustomException(e, sys)
-
-    def predict(self, features):
-        """For direct tabular input prediction."""
-        try:
-            data_scaled = self.preprocessor.transform(features)
-            preds = self.rf_model.predict(data_scaled)  # using RF as default
-            return preds
+            self.rf_model = loaded_data.get("rf_model")
+            self.knn_model = loaded_data.get("knn_model")  # fixed key
+            self.dt_model = loaded_data.get("dt_model")
+            self.symptom_index = loaded_data.get("symptom_index", {})
+            
         except Exception as e:
             raise CustomException(e, sys)
 

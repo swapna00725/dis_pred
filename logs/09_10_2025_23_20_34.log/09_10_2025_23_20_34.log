@@ -1,0 +1,16 @@
+[ 2025-09-10 23:20:34,836 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-09-10 23:20:34,839 ] 97 werkzeug - INFO -  * Debugger PIN: 251-144-859
+[ 2025-09-10 23:20:38,270 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:20:38] "GET / HTTP/1.1" 200 -
+[ 2025-09-10 23:20:41,127 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:20:41] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:20:44,636 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:20:44] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:20:53,485 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:20:53] "GET / HTTP/1.1" 200 -
+[ 2025-09-10 23:23:53,648 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:23:53] "GET / HTTP/1.1" 200 -
+[ 2025-09-10 23:23:55,471 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:23:55] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:23:58,495 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:23:58] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:23:59,820 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:23:59] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:24:02,675 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:24:02] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:24:05,094 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:24:05] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:24:08,382 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:24:08] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:24:10,286 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:24:10] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:24:14,465 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:24:14] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:26:42,762 ] 97 werkzeug - INFO -  * Detected change in 'D:\\projects_practice\\dis_pred\\app.py', reloading

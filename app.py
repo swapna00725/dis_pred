@@ -20,13 +20,13 @@ def predict_datapoint():
 
         # ✅ Create pipeline instance
         pipeline = PredictPipeline()
-        rf_pred, cb_pred, dt_pred, final_pred = pipeline.predict_disease(symptoms)
+        rf_pred, knn_pred, dt_pred, final_pred = pipeline.predict_disease(symptoms)
 
         return render_template(
             "result.html",
             symptoms=symptoms,
             rf_pred=rf_pred,
-            cb_pred=cb_pred,
+            knn_pred=knn_pred,
             dt_pred=dt_pred,
             final_pred=final_pred
         )  

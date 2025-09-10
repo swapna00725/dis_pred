@@ -1,0 +1,6 @@
+[ 2025-09-10 23:17:15,985 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-09-10 23:17:15,985 ] 97 werkzeug - INFO -  * Debugger PIN: 251-144-859
+[ 2025-09-10 23:17:19,706 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:17:19] "GET / HTTP/1.1" 200 -
+[ 2025-09-10 23:17:22,673 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:17:22] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:17:27,173 ] 97 werkzeug - INFO - 127.0.0.1 - - [10/Sep/2025 23:17:27] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-09-10 23:19:32,778 ] 97 werkzeug - INFO -  * Detected change in 'D:\\projects_practice\\dis_pred\\src\\components\\data_transformation.py', reloading
