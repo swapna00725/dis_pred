@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+        }
+        h1 {
+            color: #00796b;
+            font-size: 28px;
+        }
+        form {
+            background: #ffffff;
+            display: inline-block;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 320px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #00796b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #004d40;
+        }
+        .hint {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>🩺 Disease Prediction System</h1>
+    <form method="POST">
+        <label for="symptoms"><strong>Enter Symptoms (comma-separated):</strong></label><br><br>
+        <input type="text" id="symptoms" name="symptoms" placeholder="e.g., fever, headache, cough" required><br>
+        <button type="submit">Predict</button>
+        <div class="hint">💡 Example: fever, sore throat, fatigue</div>
+    </form>
+</body>
+</html>
