@@ -41,13 +41,11 @@ class DataTransformation:
             logging.info("error occureed in preprocessor making")
     def initiate_data_transformation(self,train_path,test_path):
         try:
+            logging.info("Read train and test data completed")
             train_df=pd.read_csv(train_path)
             test_df=pd.read_csv(test_path)
             target_col='disease'
-            logging.info("Read train and test data completed")
-
-            logging.info("Obtaining preprocessing object")
-
+            
             X_train_df=train_df.drop(target_col,axis=1)
             y_train_df=train_df[target_col]
             X_test_df=test_df.drop(target_col,axis=1)
@@ -60,10 +58,10 @@ class DataTransformation:
             #y_train_df = le.fit_transform(y_train_df)
             #y_test_df = le.transform(y_test_df)
 
-            logging.info("Applying preprocessing object on training dataframe and testing dataframe.")
-
+            logging.info("Obtaining preprocessing object")
             preprocessor_obj=self.get_data_transformer_object()
 
+            logging.info("Applying preprocessing object on training dataframe and testing dataframe.")
             input_train_arr=preprocessor_obj.fit_transform(X_train_df)
             input_test_arr=preprocessor_obj.transform(X_test_df)
 

@@ -3,8 +3,6 @@ import sys
 
 import pickle
 from sklearn.metrics import accuracy_score
-from sklearn.model_selection import GridSearchCV
-
 from src.exception import CustomException
 
 

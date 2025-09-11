@@ -1,12 +1,9 @@
 from flask import Flask, request, render_template
 import os
 from src.pipeline.predict_pipeline import PredictPipeline
-from src.utils import load_object   # ✅ You might still need this elsewhere
 
-application = Flask(__name__)
-app = application
+app = Flask(__name__)
 
-## Route for home page
 @app.route('/')
 def index():
     return render_template('index.html') 
